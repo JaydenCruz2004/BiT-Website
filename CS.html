@@ -1,65 +1,86 @@
 <!DOCTYPE html>
 <html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
+<head>
+    <title>COMING SOON BiT</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
 
-.bgimg {
-  background-image: url('https://cdn.textures4photoshop.com/tex/thumbs/matrix-code-animation-gif-free-animated-background-716.gif');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
+        .bgimg {
+            background-image: url('https://cdn.textures4photoshop.com/tex/thumbs/matrix-code-animation-gif-free-animated-background-716.gif');
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            color: white;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 25px;
+        }
 
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
+        .topleft {
+            position: absolute;
+            top: 0;
+            left: 16px;
+        }
 
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
+        .bottomleft {
+            position: absolute;
+            bottom: 0;
+            left: 16px;
+        }
 
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
 
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style>
+        hr {
+            margin: auto;
+            width: 40%;
+        }
+
+        /* Button styling */
+        .replace-button {
+            position: absolute;
+            top: 60%; /* Adjust the position as needed */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 10; /* Ensures button is above the background */
+        }
+        
+        .replace-button:hover {
+            background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+        }
+    </style>
+</head>
 <body>
-<title>COMING SOON BiT</title>
 
 <div class="bgimg">
-  <div class="topleft">
-    <p><img src="/assets/bitlogo.jpg" ></p>
-  </div>
-  <div class="middle">
-    <h1>COMING SOON</h1>
-    <hr>
-    <p id="demo" style="font-size:30px"></p>
-  </div>
-  <div class="bottomleft">
-    <p>Belmont University</p>
-  </div>
-</div>
+    <div class="topleft">
+        <p><img src="/assets/bitlogo.jpg"></p>
+    </div>
+    <div class="middle">
+        <h1>COMING SOON</h1>
+        <hr>
+        <p id="demo" style="font-size:30px"></p>
+    </div>
+    <div class="bottomleft">
+        <p>Belmont University</p>
+    </div>
 
-<button class="replace-button" onclick="myFunction()">Replace document</button>
+    <button class="replace-button" onclick="myFunction()">Replace document</button>
 </div>
 
 <script>
@@ -67,35 +88,23 @@ hr {
         location.replace("http://127.0.0.1:5500/Home.html");
     }
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Dec 5, 2024 15:37:25").getTime();
+    // Set the date we're counting down to
+    var countDownDate = new Date("Dec 5, 2024 15:37:25").getTime();
 
-// Update the count down every 1 second
-var countdownfunction = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-  
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-  
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
+    // Update the count down every 1 second
+    var countdownfunction = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        if (distance < 0) {
+            clearInterval(countdownfunction);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
 </script>
 
 </body>
