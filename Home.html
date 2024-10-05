@@ -43,13 +43,23 @@ html {
   display: table;
 }
 
-
-
+footer {
+  background: rgb(37, 62, 99);
+  color: white;
+  font-size: calc(0.75rem * var(--mantine-scale));
+  text-align: center;
+  padding: 20px;
+}
 
 
 
 .text-gradient-BiT {
   background: -webkit-linear-gradient(315deg, #0116ff 0%, rgb(0, 0, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-About{
+  background: -webkit-linear-gradient(315deg, #0116ff 0%, rgb(0, 4, 255) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -71,6 +81,20 @@ html {
           <h1 class="display-1 fw-bolder mb-0"><span class="text-gradient-BiT d-inline">Bruins in Tech</span></h1>
       </div>
 
+      
+<!-- About Section-->
+<section class="py-5">
+  <div class="container px-5 mb-5">
+      <div class="text-center mb-5">
+          <h2 class="display-6 fw-bolder mb-0"><span class="text-gradient-About d-inline">About</span></h2>
+          <h4>
+            Bruins in Tech is a student-led organization at Belmont University dedicated to fostering a dynamic community for students interested in exploring the diverse opportunities within the technology industry. Whether you're passionate about coding, cybersecurity, data science, app development, or emerging technologies, Bruins in Tech offers a supportive environment for learning, networking, and professional growth.
+
+            Our goal is to provide students with hands-on experiences, industry insights, and connections to prepare them for successful careers in technology. Through workshops, speaker events, and collaborative projects, we aim to empower students to expand their skill sets and explore the vast possibilities that technology has to offer.
+            
+            Join us as we bridge the gap between academic knowledge and real-world tech careers!
+          </h4>
+      </div>
 
 
  <!-- WebDev Section-->
@@ -132,7 +156,8 @@ html {
                   <div class="small text-muted">Computer Science and Entreprenuership Student</div>
                   <div class="small text-muted">Belmont University</div>
                   <a class="text-gradient" href="https://www.linkedin.com/in/jaydencruz/"><i class="bi bi-linkedin"></i></a>
-              <a class="text-gradient" href="https://github.com/JaydenCruz2004"><i class="bi bi-github"></i></a>
+                  <a class="text-gradient" href="https://github.com/JaydenCruz2004"><i class="bi bi-github"></i></a>
+              
               </div> 
           </div>
           <div class="col-lg-8"><div>
@@ -152,12 +177,27 @@ html {
                   <div class="small text-muted">Computer Science Student</div>
                   <div class="small text-muted">Belmont University</div>
                   <a class="text-gradient" href="https://www.linkedin.com/in/jaydencruz/"><i class="bi bi-linkedin"></i></a>
-              <a class="text-gradient" href="https://github.com/JaydenCruz2004"><i class="bi bi-github"></i></a>
+                  <a class="text-gradient" href="https://github.com/JaydenCruz2004"><i class="bi bi-github"></i></a>
           <div class="col-lg-8"><div>
           </div></div>
       </div>
+    </div>
   </div>
 </div>
+</div>
+  </div>
+</div>
+</div>
 
+<!-- Footer-->
+<footer>
+  <div style="flex-direction: column; padding: calc(1.25rem * var(--mantine-scale)); background: rgb(37, 62, 99); color: white; font-size: calc(0.75rem * var(--mantine-scale));">
+      <div>Made with 
+          <span style="color: rgb(252, 63, 63);">&lt;3</span> by the BiT Web-Dev team
+      </div>
+  </div>
+</footer>
+
+  
 </body>
 </html>

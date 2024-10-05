@@ -1737,6 +1737,8 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
+
+
 .table {
   --bs-table-color: var(--bs-body-color);
   --bs-table-bg: transparent;
