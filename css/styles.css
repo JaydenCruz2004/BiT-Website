@@ -11560,10 +11560,11 @@ html {
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    background: -webkit-linear-gradient(315deg, #1e30f3 0%, #930000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
 
 .rounded-4 {
   border-radius: 1rem !important;
