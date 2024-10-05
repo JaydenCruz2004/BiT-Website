@@ -4165,7 +4165,7 @@ textarea.form-control-lg {
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: #fff;
+  --bs-card-bg: #ffff;
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
@@ -7138,7 +7138,7 @@ textarea.form-control-lg {
 }
 
 .border-0 {
-  border: 0 !important;
+  border: 1 !important;
 }
 
 .border-top {
@@ -7669,7 +7669,7 @@ textarea.form-control-lg {
 }
 
 .mb-5 {
-  margin-bottom: 1rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .mb-auto {
