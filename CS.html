@@ -45,11 +45,16 @@
         }
 
         /* Button styling */
-        .replace-button {
+        .button-container {
             position: absolute;
             top: 70%; /* Adjusted position */
             left: 50%;
             transform: translate(-50%, -50%);
+            display: flex; /* Use flexbox to align buttons */
+            gap: 10px; /* Space between buttons */
+        }
+
+        .replace-button {
             padding: 10px 20px;
             font-size: 20px;
             background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
@@ -69,7 +74,7 @@
 
 <div class="bgimg">
     <div class="topleft">
-        <p><img src="/assets/bitlogo.jpg"></p>
+        <p><img src="/assets/bitlogo.jpg" alt="Logo"></p>
     </div>
     <div class="middle">
         <h1>COMING SOON</h1>
@@ -80,13 +85,20 @@
         <p>Belmont University</p>
     </div>
 
-
-    <button class="replace-button" onclick="myFunction()">Meet The Devs</button>
+    <div class="button-container">
+        <button class="replace-button" onclick="myFunction()">Meet The Devs</button>
+        <button class="replace-button" onclick="signUpFunction()">Sign Up</button>
+    </div>
 </div>
 
 <script>
     function myFunction() {
         location.replace("http://127.0.0.1:5500/Home.html");
+    }
+
+    function signUpFunction() {
+        // Replace with your signup URL
+        location.replace("http://127.0.0.1:5500/SignUp.html");
     }
 
     // Set the date we're counting down to
