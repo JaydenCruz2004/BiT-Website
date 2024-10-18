@@ -1,220 +1,150 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
- <!-- Bootstrap icons-->
+    <title>COMING SOON BiT</title>
+    <link rel="icon" type="image/x-icon" href="assets/bitfavicon.ico">
+
+
+     <!-- Bootstrap icons-->
  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-<style>
-html {
-  box-sizing: border-box;
-}
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+        .bgimg {
+            background-image: url('https://cdn.textures4photoshop.com/tex/thumbs/matrix-code-animation-gif-free-animated-background-716.gif');
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            color: white;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 25px;
+        }
 
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
+        .topleft {
+            position: absolute;
+            top: 0;
+            left: 16px;
+        }
 
+        .bottomleft {
+            position: absolute;
+            bottom: 0;
+            left: 16px;
+        }
+        .bottomright {
+            position: absolute;
+            bottom: 0;
+            right: 16px;
+        }
 
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
+        .text-gradient {
+            background: -webkit-linear-gradient(315deg, #ffffff 0%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.container {
-  padding: 0 16px;
-}
+        hr {
+            margin: auto;
+            width: 40%;
+        }
+        
 
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+        
 
-footer {
-  background: rgb(37, 62, 99);
-  color: white;
-  font-size: calc(0.75rem * var(--mantine-scale));
-  text-align: center;
-  padding: 20px;
-}
+        /* Button styling */
+        .button-container {
+            position: absolute;
+            top: 70%; /* Adjusted position */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex; /* Use flexbox to align buttons */
+            gap: 10px; /* Space between buttons */
+        }
 
-
-
-
-.text-gradient-BiT {
-  background: -webkit-linear-gradient(315deg, #0116ff 0%, rgb(0, 0, 0) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.text-gradient-About{
-  background: -webkit-linear-gradient(315deg, #0116ff 0%, rgb(0, 4, 255) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
-</style>
+        .replace-button {
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 10; /* Ensures button is above the background */
+        }
+        
+        .replace-button:hover {
+            background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+        }
+    </style>
 </head>
 <body>
-<!-- Core theme CSS (includes Bootstrap)-->
-<link href="css/styles.css" rel="stylesheet" />
-<title>Home Page - Bruins in Tech-Belmont University</title>
 
-<link rel="icon" type="image/x-icon" href="assets/bitfavicon.ico">
-
-
-<!-- Title Section-->
-<section class="py-4">
-  <div class="container px-4 mb-4">
-      <div class="text-center mb-4">
-          <h1 class="display-1 fw-bolder mb-0"><span class="text-gradient-BiT d-inline">Bruins in Tech</span></h1>
-      </div>
-    
-
-
-<!-- Logo Section-->
-<section class="py-4">
- <div class="container px-4 mb-4">
- <div class="text-center mb-4">
-  <img src="assets/bitlogo.jpg" alt="BiT Logo">
-</div>
-
-
-      
-<!-- About Section-->
-<section class="py-5">
-  <div class="container px-5 mb-5">
-      <div class="text-center mb-5">
-          <h2 class="display-6 fw-bolder mb-0"><span class="text-gradient-About d-inline">About</span></h2>
-          <p>
-            Bruins in Tech is a student-led organization at Belmont University dedicated to fostering a dynamic community for students interested in exploring the diverse opportunities within the technology industry. Whether you're passionate about coding, cybersecurity, data science, app development, or emerging technologies, Bruins in Tech offers a supportive environment for learning, networking, and professional growth.
-
-            Our goal is to provide students with hands-on experiences, industry insights, and connections to prepare them for successful careers in technology. Through workshops, speaker events, and collaborative projects, we aim to empower students to expand their skill sets and explore the vast possibilities that technology has to offer.
-            
-            Join us as we bridge the gap between academic knowledge and real-world tech careers!
-          </p>
-      </div>
-
-
- <!-- WebDev Section-->
- <section class="py-5">
-  <div class="container px-5 mb-5">
-      <div class="text-center mb-5">
-          <h2 class="display-6 fw-bolder mb-0"><span class="text-gradient d-inline">Meet the Web-Dev Team</span></h2>
-      </div>
-
-
-<!-- Jayden Profile Card-->
-<div class="card shadow border-0 rounded-4 mb-5">
-  <div class="card-body p-5">
-      <div class="row align-items-center gx-5">
-          <div class="col text-center text-lg-start mb-4 mb-lg-0">
-              <div class="bg-light p-4 rounded-4">
-                  <div class="text-primary fw-bolder mb-2">Jayden Cruz</div>
-                  <div class="small fw-bolder">Co-Founder and Web Developer</div>
-                  <div class="small text-muted">Computer Science and Data Science Student</div>
-                  <div class="small text-muted">Belmont University</div>
-                  <a class="text-gradient" href="https://www.linkedin.com/in/jaydencruz/"><i class="bi bi-linkedin"></i></a>
-                  <a class="text-gradient" href="https://github.com/JaydenCruz2004"><i class="bi bi-github"></i></a>
-              </div>
-          </div>
-          <div class="col-lg-8"><div>
-          </div></div>
-      </div>
-  </div>
-</div>
-
-<!-- Ethan Profile Card-->
-<div class="card shadow border-0 rounded-4 mb-5">
-  <div class="card-body p-5">
-      <div class="row align-items-center gx-5">
-          <div class="col text-center text-lg-start mb-4 mb-lg-0">
-              <div class="bg-light p-4 rounded-4">
-                  <div class="text-primary fw-bolder mb-2">Ethan Williams</div>
-                  <div class="small fw-bolder">Web Developer</div>
-                  <div class="small text-muted">Computer Science and Business Administration Student</div>
-                  <div class="small text-muted">Belmont University</div>
-                  <a class="text-gradient" href="https://www.linkedin.com/in/ethan-williams-64aba6251/"><i class="bi bi-linkedin"></i></a>
-                  <a class="text-gradient" href="https://github.com/EthanWilliams27"><i class="bi bi-github"></i></a>
-              </div> 
-          </div>
-          <div class="col-lg-8"><div>
-          </div></div>
-      </div>
-  </div>
-</div>
-  
-<!-- Rigo Profile Card-->
-<div class="card shadow border-0 rounded-4 mb-5">
-  <div class="card-body p-5">
-      <div class="row align-items-center gx-5">
-          <div class="col text-center text-lg-start mb-4 mb-lg-0">
-              <div class="bg-light p-4 rounded-4">
-                  <div class="text-primary fw-bolder mb-2">Rigoberto Alvarado-Rayo</div>
-                  <div class="small fw-bolder">Web Developer</div>
-                  <div class="small text-muted">Computer Science and Entreprenuership Student</div>
-                  <div class="small text-muted">Belmont University</div>
-                  <a class="text-gradient" href="https://www.linkedin.com/in/rigoberto-alvarado-rayo-962417268/"><i class="bi bi-linkedin"></i></a>
-                  <a class="text-gradient" href="https://github.com/RigoAR"><i class="bi bi-github"></i></a>
-              
-              </div> 
-          </div>
-          <div class="col-lg-8"><div>
-          </div></div>
-      </div>
-  </div>
-</div>
-  
-<!-- Vidal Profile Card-->
-<div class="card shadow border-0 rounded-4 mb-5">
-  <div class="card-body p-5">
-      <div class="row align-items-center gx-5">
-          <div class="col text-center text-lg-start mb-4 mb-lg-0">
-              <div class="bg-light p-4 rounded-4">
-                  <div class="text-primary fw-bolder mb-2">Vidal Turcios</div>
-                  <div class="small fw-bolder">Web Developer</div>
-                  <div class="small text-muted">Computer Science Student</div>
-                  <div class="small text-muted">Belmont University</div>
-                  <a class="text-gradient" href="https://www.linkedin.com/in/jaydencruz/"><i class="bi bi-linkedin"></i></a>
-                  <a class="text-gradient" href="https://github.com/JaydenCruz2004"><i class="bi bi-github"></i></a>
-              
-              </div>
-            </div>
-          <div class="col-lg-8"><div>
-          </div></div>
-      </div>
+<div class="bgimg">
+    <div class="topleft">
+        <p><img src="/assets/bitlogo.jpg" alt="Logo"></p>
     </div>
-  </div>
-  <!-------END of profile cards-->
+    <div class="middle">
+        <h1>COMING SOON</h1>
+        <hr>
+        <p id="demo" style="font-size:30px"></p>
+    </div>
+    <div class="bottomleft">
+        <p>Belmont University</p>
+    </div>
 
-</div>
-</div>
-</div>
-</div>
+    <div class="bottomright">
+        <a class="text-gradient" href="https://www.linkedin.com/company/bruins-in-tech/posts/?feedView=all"><i class="bi bi-linkedin"></i></a>
+<a class="text-gradient" href="https://www.instagram.com/bruinsintech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="bi bi-instagram"></i></a>
+
+    </div>
+
+    <div class="button-container">
+        <button class="replace-button" onclick="myFunction()">Meet The Devs</button>
+        <button class="replace-button" onclick="signUpFunction()">Sign Up</button>
+    </div>
 </div>
 
-<!-- Footer-->
-<footer>
-  <div style="flex-direction: column; padding: calc(1.25rem * var(--mantine-scale)); background: rgb(37, 62, 99); color: white; font-size: calc(0.75rem * var(--mantine-scale));">
-      <div>Made with 
-          <span style="color: rgb(252, 63, 63);">&lt;3</span> by the BiT Web-Dev team
-      </div>
-  </div>
-</footer>
+<script>
+    function myFunction() {
+        location.replace("http://127.0.0.1:5500/Home.html");
+    }
 
-  
+    function signUpFunction() {
+        // Replace with your signup URL
+        location.replace("https://bruinlink.belmont.edu/organization/bruinsintech");
+    }
+
+    // Set the date we're counting down to
+    var countDownDate = new Date("Dec 5, 2024 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var countdownfunction = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        if (distance < 0) {
+            clearInterval(countdownfunction);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+
 </body>
 </html>
